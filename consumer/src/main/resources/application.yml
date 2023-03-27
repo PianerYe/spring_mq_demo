@@ -8,3 +8,6 @@ spring:
     username: yepianer
     password: 123456
     virtual-host: /
+    listener:
+      simple:
+        prefetch: 1
