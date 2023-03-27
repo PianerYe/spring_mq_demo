@@ -50,4 +50,14 @@ public class SpringAmqpTest {
         // 发送
         rabbitTemplate.convertAndSend(exchangeName,"red",message);
     }
+
+    @Test
+    public void testSendTopictExchange(){
+        // 交换机名称
+        String exchangeName = "itcast.topic";
+        // 消息
+        String message = "今天天气多云！";
+        // 发送
+        rabbitTemplate.convertAndSend(exchangeName,"china.weather",message);
+    }
 }
