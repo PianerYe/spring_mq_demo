@@ -30,4 +30,14 @@ public class SpringAmqpTest {
         }
 
     }
+
+    @Test
+    public void testSendFanoutExchange(){
+        // 交换机名称
+        String exchangeName = "itcast.fanout";
+        // 消息
+        String message = "hello,everyone!";
+        // 发送
+        rabbitTemplate.convertAndSend(exchangeName,"",message);
+    }
 }
